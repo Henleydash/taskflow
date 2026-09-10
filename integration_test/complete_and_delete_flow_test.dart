@@ -17,8 +17,7 @@ import '../test/helpers/fake_task_repository.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('deleting a task from its detail screen removes it from the list',
-      (tester) async {
+  testWidgets('deleting a task from its detail screen removes it from the list', (tester) async {
     final repo = FakeTaskRepository();
     await repo.addTask(
       Task(
@@ -35,7 +34,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [taskRepositoryProvider.overrideWithValue(repo)],
-        child: MaterialApp(
+        child: const MaterialApp(
           locale: const Locale('en'),
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,

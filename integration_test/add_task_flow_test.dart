@@ -14,14 +14,13 @@ import '../test/helpers/fake_task_repository.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('adding a task through the form makes it appear on the home list',
-      (tester) async {
+  testWidgets('adding a task through the form makes it appear on the home list', (tester) async {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
           taskRepositoryProvider.overrideWithValue(FakeTaskRepository()),
         ],
-        child: MaterialApp(
+        child: const MaterialApp(
           locale: const Locale('en'),
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -36,8 +35,7 @@ void main() {
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
 
-    await tester.enterText(
-        find.widgetWithText(TextFormField, 'Title'), 'Prepare release notes');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Title'), 'Prepare release notes');
     await tester.tap(find.text('Save'));
     await tester.pumpAndSettle();
 
