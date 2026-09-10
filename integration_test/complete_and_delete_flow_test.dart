@@ -36,10 +36,10 @@ void main() {
       ProviderScope(
         overrides: [taskRepositoryProvider.overrideWithValue(repo)],
         child: const MaterialApp(
-          locale: const Locale('en'),
+          locale: Locale('en'),
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          home: const HomeScreen(),
+          home: HomeScreen(),
         ),
       ),
     );
