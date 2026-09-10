@@ -28,9 +28,11 @@ class SettingsScreen extends ConsumerWidget {
             children: [
               _StatChip(label: l10n.totalTasks, value: taskState.tasks.length),
               const SizedBox(width: 8),
-              _StatChip(label: l10n.pendingTasks, value: taskState.pendingCount),
+              _StatChip(
+                  label: l10n.pendingTasks, value: taskState.pendingCount),
               const SizedBox(width: 8),
-              _StatChip(label: l10n.completedTasks, value: taskState.completedCount),
+              _StatChip(
+                  label: l10n.completedTasks, value: taskState.completedCount),
             ],
           ),
           const Divider(height: 32),
@@ -41,7 +43,8 @@ class SettingsScreen extends ConsumerWidget {
               child: DropdownButton<Locale>(
                 value: locale,
                 items: const [
-                  DropdownMenuItem(value: Locale('fr'), child: Text('Français')),
+                  DropdownMenuItem(
+                      value: Locale('fr'), child: Text('Français')),
                   DropdownMenuItem(value: Locale('en'), child: Text('English')),
                 ],
                 onChanged: (value) {
@@ -81,7 +84,8 @@ class _StatChip extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 12),
             child: Column(
               children: [
-                Text('$value', style: Theme.of(context).textTheme.headlineSmall),
+                Text('$value',
+                    style: Theme.of(context).textTheme.headlineSmall),
                 Text(label, style: Theme.of(context).textTheme.bodySmall),
               ],
             ),

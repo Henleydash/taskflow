@@ -11,7 +11,8 @@ import 'package:taskflow/presentation/providers/task_notifier.dart';
 
 import '../helpers/fake_task_repository.dart';
 
-Task _task({String id = '1', TaskCategory category = TaskCategory.work}) => Task(
+Task _task({String id = '1', TaskCategory category = TaskCategory.work}) =>
+    Task(
       id: id,
       title: 'Task $id',
       description: '',
@@ -53,7 +54,8 @@ void main() {
       expect(notifier.state.errorKey, 'loadFailed');
     });
 
-    test('addTask() with a valid task refreshes state and returns true', () async {
+    test('addTask() with a valid task refreshes state and returns true',
+        () async {
       final repo = FakeTaskRepository();
       final notifier = _buildNotifier(repo);
 
@@ -63,7 +65,8 @@ void main() {
       expect(notifier.state.tasks.length, 1);
     });
 
-    test('addTask() with an empty title sets errorKey and returns false', () async {
+    test('addTask() with an empty title sets errorKey and returns false',
+        () async {
       final repo = FakeTaskRepository();
       final notifier = _buildNotifier(repo);
 

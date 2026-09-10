@@ -51,7 +51,8 @@ void main() {
     expect(tapped, isTrue);
   });
 
-  testWidgets('TaskCard calls onToggleComplete when the checkbox is tapped', (tester) async {
+  testWidgets('TaskCard calls onToggleComplete when the checkbox is tapped',
+      (tester) async {
     var toggled = false;
     await pumpAndSettleTest(
       tester,
@@ -70,12 +71,16 @@ void main() {
     expect(toggled, isTrue);
   });
 
-  testWidgets('TaskCard strikes through the title when completed', (tester) async {
+  testWidgets('TaskCard strikes through the title when completed',
+      (tester) async {
     await pumpAndSettleTest(
       tester,
       wrapForTest(
         Scaffold(
-          body: TaskCard(task: _task(completed: true), onTap: () {}, onToggleComplete: () {}),
+          body: TaskCard(
+              task: _task(completed: true),
+              onTap: () {},
+              onToggleComplete: () {}),
         ),
       ),
     );

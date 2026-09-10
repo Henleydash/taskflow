@@ -78,7 +78,8 @@ class TaskDetailScreen extends ConsumerWidget {
               Icon(TaskVisuals.categoryIcon(task.category)),
               const SizedBox(width: 8),
               Expanded(
-                child: Text(task.title, style: Theme.of(context).textTheme.headlineSmall),
+                child: Text(task.title,
+                    style: Theme.of(context).textTheme.headlineSmall),
               ),
               PriorityBadge(priority: task.priority),
             ],
@@ -86,7 +87,8 @@ class TaskDetailScreen extends ConsumerWidget {
           const SizedBox(height: 16),
           if (task.description.isNotEmpty) Text(task.description),
           const SizedBox(height: 16),
-          Text('${l10n.dueDateLabel}: ${DateFormatter.short(task.dueDate, localeCode)}'),
+          Text(
+              '${l10n.dueDateLabel}: ${DateFormatter.short(task.dueDate, localeCode)}'),
         ],
       ),
     );

@@ -4,7 +4,10 @@ import 'package:taskflow/domain/entities/task.dart';
 import 'package:taskflow/domain/entities/task_category.dart';
 import 'package:taskflow/domain/usecases/filter_tasks.dart';
 
-Task _task({required TaskCategory category, required Priority priority, bool completed = false}) =>
+Task _task(
+        {required TaskCategory category,
+        required Priority priority,
+        bool completed = false}) =>
     Task(
       id: '${category.name}-${priority.name}',
       title: 't',
@@ -44,7 +47,8 @@ void main() {
     });
 
     test('combines multiple filters', () {
-      final result = filter(tasks, category: TaskCategory.work, completed: false);
+      final result =
+          filter(tasks, category: TaskCategory.work, completed: false);
       expect(result.length, 1);
       expect(result.first.priority, Priority.high);
     });

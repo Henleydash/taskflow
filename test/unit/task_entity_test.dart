@@ -17,12 +17,14 @@ Task _buildTask({bool completed = false, DateTime? dueDate}) => Task(
 void main() {
   group('Task entity', () {
     test('isOverdue is false for a future due date', () {
-      final task = _buildTask(dueDate: DateTime.now().add(const Duration(days: 2)));
+      final task =
+          _buildTask(dueDate: DateTime.now().add(const Duration(days: 2)));
       expect(task.isOverdue, isFalse);
     });
 
     test('isOverdue is true for a past due date when not completed', () {
-      final task = _buildTask(dueDate: DateTime.now().subtract(const Duration(days: 1)));
+      final task =
+          _buildTask(dueDate: DateTime.now().subtract(const Duration(days: 1)));
       expect(task.isOverdue, isTrue);
     });
 

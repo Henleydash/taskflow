@@ -71,10 +71,9 @@ class TaskFormScreen extends HookConsumerWidget {
             TextFormField(
               controller: titleController,
               decoration: InputDecoration(labelText: l10n.titleLabel),
-              validator: (value) =>
-                  (value == null || value.trim().isEmpty)
-                      ? l10n.titleRequired
-                      : null,
+              validator: (value) => (value == null || value.trim().isEmpty)
+                  ? l10n.titleRequired
+                  : null,
             ),
             const SizedBox(height: 12),
             TextFormField(
@@ -91,7 +90,8 @@ class TaskFormScreen extends HookConsumerWidget {
               onTap: pickDate,
             ),
             const SizedBox(height: 12),
-            Text(l10n.priorityLabel, style: Theme.of(context).textTheme.labelLarge),
+            Text(l10n.priorityLabel,
+                style: Theme.of(context).textTheme.labelLarge),
             Wrap(
               spacing: 8,
               children: Priority.values.map((p) {
@@ -103,7 +103,8 @@ class TaskFormScreen extends HookConsumerWidget {
               }).toList(),
             ),
             const SizedBox(height: 12),
-            Text(l10n.categoryLabel, style: Theme.of(context).textTheme.labelLarge),
+            Text(l10n.categoryLabel,
+                style: Theme.of(context).textTheme.labelLarge),
             Wrap(
               spacing: 8,
               children: TaskCategory.values.map((c) {

@@ -5,7 +5,8 @@ import 'package:taskflow/presentation/widgets/empty_state.dart';
 import 'test_app_wrapper.dart';
 
 void main() {
-  testWidgets('EmptyState shows the empty-list icon and hint text', (tester) async {
+  testWidgets('EmptyState shows the empty-list icon and hint text',
+      (tester) async {
     await pumpAndSettleTest(
       tester,
       wrapForTest(const Scaffold(body: EmptyState())),

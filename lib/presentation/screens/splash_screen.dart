@@ -24,7 +24,8 @@ class SplashScreen extends HookWidget {
       body: Center(
         child: Semantics(
           label: 'TaskFlow',
-          child: const Icon(Icons.checklist_rtl, size: 96, color: Colors.indigo),
+          child:
+              const Icon(Icons.checklist_rtl, size: 96, color: Colors.indigo),
         ),
       ),
     );
