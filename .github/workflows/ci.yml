@@ -75,7 +75,9 @@ jobs:
         run: flutter create --platforms=linux .
 
       - name: Run integration tests
-        run: xvfb-run -a dbus-run-session -- flutter test integration_test -d linux
+        run: |
+          xvfb-run -a dbus-run-session -- flutter test integration_test/add_task_flow_test.dart -d linux
+          xvfb-run -a dbus-run-session -- flutter test integration_test/complete_and_delete_flow_test.dart -d linux
 
   build-apk:
     name: Build demo APK
