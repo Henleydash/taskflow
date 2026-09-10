@@ -7,18 +7,11 @@ linter:
     avoid_print: true
     prefer_final_locals: true
     unnecessary_this: true
-    require_trailing_commas: true
 
 analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
     - "build/**"
-    - android/**
-    - ios/**
-    - web/**
-    - windows/**
-    - macos/**
-    - linux/**
   errors:
     invalid_annotation_target: ignore
