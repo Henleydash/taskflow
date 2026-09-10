@@ -17,7 +17,8 @@ import '../test/helpers/fake_task_repository.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('deleting a task from its detail screen removes it from the list', (tester) async {
+  testWidgets('deleting a task from its detail screen removes it from the list',
+      (tester) async {
     final repo = FakeTaskRepository();
     await repo.addTask(
       Task(
