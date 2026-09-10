@@ -108,6 +108,9 @@ jobs:
           flutter gen-l10n
           dart run build_runner build --delete-conflicting-outputs
 
+      - name: Scaffold Android platform folder
+        run: flutter create --platforms=android .
+
       - name: Build release APK
         run: flutter build apk --release
 
