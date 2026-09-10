@@ -14,7 +14,7 @@ project to demonstrate a testable, maintainable clean architecture end to end.
 
 | Home | Add task | Detail | Settings |
 |---|---|---|---|
-| ![Home](screenshots/Acceuil.jpg) | ![Add task](screenshots/ajout.jpg) | ![Detail](screenshots/détails.jpg) | ![Settings](screenshots/Reglages.jpg) |
+| ![Home](screenshots/Acceuil.jpg) | ![Add task](screenshots/ajout.jpg) | ![Detail](screenshots/Détails.jpg) | ![Settings](screenshots/Reglages.jpg) |
 
 ## Features
 
